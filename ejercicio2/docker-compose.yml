@@ -2,6 +2,7 @@ version: '3.8'
 services:
   apacheweb:
     build: ./web
+    container_name: apacheweb
     environment:
       - MARIADB_DATABASE=${MARIADB_DATABASE}
     env_file:
@@ -14,6 +15,7 @@ services:
       - net_lamp
   db:
     build: ./db
+    container_name: db
     environment:
       - MARIADB_USER=${MARIADB_USER}
       - MARIADB_PASSWORD=${MARIADB_PASSWORD}

@@ -5,7 +5,8 @@ services:
         context: .
         dockerfile: ./web/Dockerfile
         args:
-          - MARIADB_PASSWORD=${MARIADB_PASSWORD}               
+          - MARIADB_PASSWORD=${MARIADB_PASSWORD}
+          - DB_HOST=db            
       container_name: apacheweb
       env_file:
         - .env

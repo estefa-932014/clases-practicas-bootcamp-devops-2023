@@ -18,7 +18,7 @@ if [ -d "$repo" ] ; then
     docker-compose up -d --build
 else
     echo -e "\n${LYELLOW} Se clonará el repositorio.${NC}"
-    git clone https://github.com/roxsross/$repo.git
+    git clone https://github.com/estefa-932014/$repo.git
     cd $repo/
     git checkout $branch
     docker-compose up -d --build
